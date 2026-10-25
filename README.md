@@ -20,7 +20,7 @@ assets/img/           Web-ready images (cropped from the clinic's Instagram)
 assets/img/source/    Original Instagram downloads, not referenced by the site
 ```
 
-Opening hours appear in three places: the `HOURS` array in `main.js` (drives "Open now"), the hours table in `index.html`, and the JSON-LD block in `<head>`. Update all three together.
+Opening hours appear in the `HOURS` array in `main.js` (drives "Open now"), the hours table in `index.html`, and the JSON-LD block in `<head>`. Update these together, along with the hero fallback text, hours section introduction, and footer summary.
 
 ## Content sources
 
@@ -28,13 +28,13 @@ Everything comes from the clinic's Instagram (@southdownchiropractic): services 
 
 ## Confirm with the clinic before launch
 
-- Hours are still current (Mon/Wed 9–8, Tue/Sat 9–3, Thu 10–8, Fri/Sun closed)
+- Hours are still current (Mon/Wed 9–8, Thu 10–8, Sat 9–3, Tue/Fri/Sun closed)
 - That massage is billable to extended health benefits, and whether they direct-bill
 - Who their registered massage therapist is (to name them on the site), when massage is available, and current pricing
 - Whether they want online booking (e.g. Jane App); currently all CTAs are call/email
 - Permission to use Jason's testimonial and photos on the website
 - Higher-resolution photos of the clinic, Dr. Z and the massage room (current ones are crops from Instagram graphics)
 
-## Deploying
+## Email form
 
-Upload the folder (excluding `assets/img/source/`) to any static host: Netlify, Cloudflare Pages, GitHub Pages, or their existing hosting. Point `southdownchiropractic.com` at it, which currently uses GoDaddy's site builder.
+The "Email us" button opens a form for name, required email, message, and an optional request for email updates. The "Send" button currently validates the fields and displays a notice that sending is not available. It does not send or store submissions, open an email app, or subscribe anyone to a mailing list. Connect a form service or backend in `setupContactForm()` in `assets/js/main.js` to enable delivery later. A separate direct email link remains available below the form.

@@ -7,7 +7,7 @@
   var HOURS = [
     null,           // Sunday
     [9, 20],        // Monday
-    [9, 15],        // Tuesday
+    null,           // Tuesday
     [9, 20],        // Wednesday
     [10, 20],       // Thursday
     null,           // Friday
@@ -89,9 +89,6 @@
     function setOpen(open) {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
-      if (open) {
-        nav.style.setProperty("--nav-top", header.getBoundingClientRect().bottom + "px");
-      }
     }
 
     toggle.addEventListener("click", function () {
@@ -152,6 +149,53 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
+  function setupContactForm() {
+    var dialog = document.getElementById("contact-dialog");
+    var form = document.getElementById("contact-form");
+    var opener = document.querySelector("[data-contact-open]");
+    if (!dialog || !form || !opener || typeof dialog.showModal !== "function") return;
+
+    var status = form.querySelector("[data-contact-status]");
+
+    opener.addEventListener("click", function (event) {
+      event.preventDefault();
+      status.textContent = "";
+      dialog.showModal();
+      document.body.classList.add("contact-is-open");
+    });
+    dialog.querySelector("[data-contact-close]").addEventListener("click", function () {
+      dialog.close();
+    });
+    var pointerStartedOutside = false;
+    function isOutsideDialog(event) {
+      var bounds = dialog.getBoundingClientRect();
+      return event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom;
+    }
+    dialog.addEventListener("pointerdown", function (event) {
+      pointerStartedOutside = event.target === dialog && isOutsideDialog(event);
+    });
+    dialog.addEventListener("click", function (event) {
+      if (pointerStartedOutside && event.target === dialog && isOutsideDialog(event)) {
+        dialog.close();
+      }
+      pointerStartedOutside = false;
+    });
+    dialog.addEventListener("close", function () {
+      pointerStartedOutside = false;
+      document.body.classList.remove("contact-is-open");
+      opener.focus({ preventScroll: true });
+    });
+    form.addEventListener("input", function () {
+      status.textContent = "";
+    });
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      // Connect the email service here when it is ready.
+      status.textContent = "Sending is not available yet. Your message has not been sent.";
+    });
+  }
+
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -159,4 +203,5 @@
   setupNav();
   setupActiveLinks();
   setupReveal();
+  setupContactForm();
 })();

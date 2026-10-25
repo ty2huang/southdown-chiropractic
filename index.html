@@ -39,7 +39,6 @@
     },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday"], "opens": "09:00", "closes": "20:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "15:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
     ],
@@ -47,17 +46,16 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="announce">
     <div class="container announce__inner">
-      <p><span class="pulse" aria-hidden="true"></span> Always accepting new patients</p>
-      <a href="tel:+19058228606">Call 905-822-8606</a>
+      <p><span class="pulse" aria-hidden="true"></span> Accepting new patients</p>
     </div>
   </div>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#top" aria-label="Southdown Chiropractic &amp; Wellness, home">
         <img src="assets/img/logo-mark.png" alt="" width="21" height="50">
@@ -81,7 +79,7 @@
           <li><a href="#massage">Massage</a></li>
           <li><a href="#visit">Hours &amp; location</a></li>
         </ul>
-        <a class="btn btn--primary btn--sm" href="tel:+19058228606">Book an appointment</a>
+        <a class="btn btn--primary btn--sm" href="tel:+19058228606">Call to book</a>
       </nav>
     </div>
   </header>
@@ -105,7 +103,7 @@
             </a>
             <a class="btn btn--ghost" href="#services">Explore our services</a>
           </div>
-          <p class="hero__tagline">“We move your bones, to help heal your body.”</p>
+          <p class="hero__tagline">“We move your bones - to help heal your body!”</p>
         </div>
 
         <div class="hero__media">
@@ -116,7 +114,7 @@
             <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             <div>
               <p class="status-card__state" data-status>Hours this week</p>
-              <p class="status-card__detail" data-status-detail>Mon–Thu &amp; Sat</p>
+              <p class="status-card__detail" data-status-detail>Mon, Wed, Thu &amp; Sat</p>
             </div>
           </div>
         </div>
@@ -141,49 +139,37 @@
         </header>
 
         <div class="services">
-          <article class="service service--feature reveal">
-            <div class="service__media">
-              <img src="assets/img/clinic-sign.jpg" alt="Dr. Paul Zmiyiwsky beside the clinic services sign" width="856" height="398" loading="lazy">
-            </div>
-            <div class="service__body">
-              <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="3" rx="1.5"/><rect x="8.5" y="7" width="7" height="3" rx="1.5"/><rect x="8.5" y="11.5" width="7" height="3" rx="1.5"/><rect x="9" y="16" width="6" height="3" rx="1.5"/><path d="M12 19.5V22"/></svg></span>
-              <h3>Chiropractic care</h3>
-              <p>Hands-on adjustments that restore movement and ease back pain, neck tension, headaches and stiffness. Dr. Paul builds every treatment plan around you and your goals, whether that's chronic pain, injury recovery or preventive care.</p>
-            </div>
+          <article class="service reveal">
+            <h3>Chiropractic care</h3>
+            <p>Hands-on adjustments that restore movement and ease back pain, neck tension, headaches and stiffness. Dr. Paul Zmiyiwsky builds every treatment plan around you and your goals, whether that's chronic pain, injury recovery or preventive care.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></span>
             <h3>Registered massage therapy</h3>
             <p>One-on-one treatment with our registered massage therapist to release tension, recover from injury or simply unwind.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M12 6.5v11M9.5 9h5M9 12h6M9.5 15h5"/></svg></span>
             <h3>Digital X-rays &amp; spinal scans</h3>
             <p>On-site digital spinal X-rays, taken when appropriate, show us what's going on so we can explain our findings clearly.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 2.5c-3 0-5 2.6-5 6.4 0 3.1 1.3 5.4 1.8 7.6.6 2.6 1.6 5 4.2 5 2.2 0 3-1.6 3-3.6 0-1.7-.7-2.9-.7-4.6 0-2.2 2.7-3.7 2.7-6.8C15 4.6 12.4 2.5 9 2.5z"/><path d="M16.5 4.5c1.6.8 3 2.5 3 5.2 0 2.4-1.4 3.8-1.9 5.6"/></svg></span>
             <h3>Custom orthotics &amp; orthopedic shoes</h3>
-            <p>Custom orthotic inserts fitted on-site by Dr. Paul to support your feet, knees and back, for students, teachers and anyone on the move.</p>
+            <p>Custom orthotic inserts fitted on-site by Dr. Paul Zmiyiwsky to support your feet, knees and back, for students, teachers and anyone on the move.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20 15.5 8.5M13.5 6.5l4 4M16 4l4 4"/><path d="M6 4v3M4.5 5.5h3M18 15v4M16 17h4"/></svg></span>
             <h3>Acupuncture</h3>
             <p>A complementary therapy that works alongside your other care to ease pain and help you relax.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3.5 21l1.4-4.6A8.5 8.5 0 1 1 21 12z"/><path d="M12 15.5s-3.4-2-3.4-4.2A1.7 1.7 0 0 1 12 10.4a1.7 1.7 0 0 1 3.4.9c0 2.2-3.4 4.2-3.4 4.2z"/></svg></span>
             <h3>Psychotherapy</h3>
             <p>Stress, anxiety and emotional strain often show up as tension, headaches and poor sleep. Our psychotherapy services care for your mind as well as your body.</p>
           </article>
 
           <article class="service reveal">
-            <span class="service__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a5 5 0 0 0-7-7l-10 10a5 5 0 0 0 7 7z"/><path d="m8.5 8.5 7 7"/></svg></span>
             <h3>Vitamins &amp; detox kits</h3>
             <p>Quality supplements and detox kits to complement your treatment and support everyday wellness.</p>
           </article>
@@ -228,7 +214,7 @@
             </li>
             <li>
               <h3>Holistic</h3>
-              <p>Chiropractic, massage and mind–body care working together.</p>
+              <p>Chiropractic, massage and mind-body care working together.</p>
             </li>
           </ul>
         </div>
@@ -258,7 +244,7 @@
           <li class="step reveal">
             <span class="step__num">02</span>
             <div>
-              <h3>Meet Dr. Paul</h3>
+              <h3>Meet Dr. Paul Zmiyiwsky</h3>
               <p>Sit down one-on-one to talk through what you're feeling, followed by a thorough assessment.</p>
             </div>
           </li>
@@ -303,7 +289,7 @@
             <li>Covered by many extended health benefit plans</li>
             <li>Gift certificates available, the perfect gift of self-care</li>
           </ul>
-          <a class="btn btn--light" href="tel:+19058228606">Book a massage</a>
+          <a class="btn btn--light" href="tel:+19058228606">Call to book a massage</a>
         </div>
       </div>
     </section>
@@ -320,7 +306,7 @@
             <svg viewBox="0 0 24 24"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
           </div>
           <blockquote>
-            <p>“Doctor P has been adjusting me for over 10 years and has always taken amazing care of me. Going above and beyond in every visit. I recommend his services to everyone with pain in their body!”</p>
+            <p>“Doctor Paul has been adjusting me for over 10 years and has always taken amazing care of me. Going above and beyond in every visit. I recommend his services to everyone with pain in their body!”</p>
           </blockquote>
           <figcaption>Jason <span>· Patient for 10+ years</span></figcaption>
         </figure>
@@ -336,7 +322,7 @@
         <header class="section-head">
           <p class="eyebrow">Visit us</p>
           <h2>Hours &amp; location</h2>
-          <p>Evening appointments Monday to Thursday, plus Saturday mornings.</p>
+          <p>Appointments available Mondays, Wednesdays, Thursdays, and Saturdays.</p>
         </header>
 
         <div class="visit">
@@ -348,12 +334,12 @@
             <table class="hours" data-hours>
               <caption class="visually-hidden">Weekly opening hours</caption>
               <tbody>
-                <tr data-day="1"><th scope="row">Monday</th><td>9:00 am – 8:00 pm</td></tr>
-                <tr data-day="2"><th scope="row">Tuesday</th><td>9:00 am – 3:00 pm</td></tr>
-                <tr data-day="3"><th scope="row">Wednesday</th><td>9:00 am – 8:00 pm</td></tr>
-                <tr data-day="4"><th scope="row">Thursday</th><td>10:00 am – 8:00 pm</td></tr>
+                <tr data-day="1"><th scope="row">Monday</th><td>9:00 am - 8:00 pm</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td class="closed">Closed</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>9:00 am - 8:00 pm</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>10:00 am - 8:00 pm</td></tr>
                 <tr data-day="5"><th scope="row">Friday</th><td class="closed">Closed</td></tr>
-                <tr data-day="6"><th scope="row">Saturday</th><td>9:00 am – 3:00 pm</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>9:00 am - 3:00 pm</td></tr>
                 <tr data-day="0"><th scope="row">Sunday</th><td class="closed">Closed</td></tr>
               </tbody>
             </table>
@@ -393,11 +379,42 @@
         <p>We're always accepting new patients. Call us or send an email and we'll find a time that works for you.</p>
         <div class="cta__actions">
           <a class="btn btn--primary" href="tel:+19058228606">Call 905-822-8606</a>
-          <a class="btn btn--ghost" href="mailto:southdownchiro@gmail.com?subject=Appointment%20request">Email us</a>
+          <button class="btn btn--ghost" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog">Email us</button>
         </div>
       </div>
     </section>
   </main>
+
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-intro">
+    <div class="contact-dialog__heading">
+      <h2 id="contact-title">Email us</h2>
+      <button class="contact-dialog__close" type="button" data-contact-close aria-label="Close email form">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <p id="contact-intro">Tell us how we can help.</p>
+    <form class="contact-form" id="contact-form">
+      <div class="contact-form__field">
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" autofocus>
+      </div>
+      <div class="contact-form__field">
+        <label for="contact-email">Email <span class="contact-form__required">(required)</span></label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+      <div class="contact-form__field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="3" maxlength="4000"></textarea>
+      </div>
+      <label class="contact-form__opt-in" for="contact-updates">
+        <input id="contact-updates" name="updates" type="checkbox">
+        <span>I'd like to sign up for email updates, promotions, and more.</span>
+      </label>
+      <button class="btn btn--primary" type="submit">Send</button>
+      <p class="contact-form__status" role="status" data-contact-status></p>
+    </form>
+    <p class="contact-dialog__alternative">Or email <a href="mailto:southdownchiro@gmail.com">southdownchiro@gmail.com</a> directly.</p>
+  </dialog>
 
   <footer class="site-footer">
     <div class="container site-footer__grid">
@@ -416,7 +433,7 @@
       </div>
       <div>
         <h2 class="site-footer__heading">Hours</h2>
-        <p>Mon &amp; Wed 9 am – 8 pm<br>Tue &amp; Sat 9 am – 3 pm<br>Thu 10 am – 8 pm<br>Fri &amp; Sun closed</p>
+        <p>Mon &amp; Wed 9 am - 8 pm<br>Thu 10 am - 8 pm<br>Sat 9 am - 3 pm<br>Tue, Fri &amp; Sun closed</p>
       </div>
       <div>
         <h2 class="site-footer__heading">Explore</h2>
